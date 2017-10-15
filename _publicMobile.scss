@@ -1,0 +1,234 @@
+@import './_color.scss';
+
+// 20次循环
+
+@for $i from 1 through 20{
+  // margin
+  .l#{$i}{
+    left:$i * 0.1rem
+  }
+  .r#{$i}{
+    right:$i * 0.1rem
+  }
+  .t#{$i}{
+    top:$i * 0.1rem
+  }
+  .b#{$i}{
+    bottom:$i * 0.1rem
+  }
+  .mt#{$i}{
+    margin-top:$i * 0.1rem;
+  }
+  .mr#{$i}{
+    margin-right:$i * 0.1rem;
+  }
+  .mb#{$i}{
+    margin-bottom:$i * 0.1rem;
+  }
+  .ml#{$i}{
+    margin-left:$i * 0.1rem;
+  }
+
+  // padding
+  .pt#{$i}{
+    padding-top:$i * 0.1rem;
+  }
+  .pr#{$i}{
+    padding-right:$i * 0.1rem;
+  }
+  .pb#{$i}{
+    padding-bottom:$i * 0.1rem;
+  }
+  .pl#{$i}{
+    padding-left:$i * 0.1rem;
+  }
+
+  // 高宽
+  .col#{$i * 5}{
+    width:$i * 5%;
+  }
+  .row#{$i * 5}{
+    height:$i * 5%;
+  }
+}
+
+// 50次循环
+
+@for $i from 1 through 50{
+  .h#{$i}{
+    height:$i * 0.1rem;
+  }
+  .w#{$i}{
+    width:$i * 0.1rem;
+  }
+  .lh#{$i}{
+    line-height:$i * 0.1rem;
+  }
+}
+
+// 颜色
+
+.colorSky{
+  color: $sky !important;
+}
+
+.colorPink{
+  color: deeppink !important;
+}
+
+.colorBlack{
+  color: #000 !important;
+}
+
+.colorWhite{
+  color: #fff !important;
+}
+
+.colorGreen{
+  color: $thinGreen !important;
+}
+
+.colorLine{
+  color:$line !important;
+}
+
+.colorGrey{
+  color:$lighterGrey !important;
+}
+
+.colorText{
+  color:#8e959a !important;
+}
+
+// 背景颜色
+
+.bkSky{
+  background-color: $sky;
+}
+
+.bkWhite{
+  background-color: #fff;
+}
+
+.bkGreen{
+  background-color: $thinGreen;
+}
+
+.bkGrey{
+  background-color: #dedede;
+}
+
+// 水平
+
+.tl{
+  text-align: left;
+}
+
+.tc{
+  text-align: center;
+}
+
+.tr{
+  text-align: right;
+}
+
+// 浮动
+
+.fl{
+  float: left;
+}
+
+.fr{
+  float: right;
+}
+
+// 指针
+
+.point{
+  cursor: pointer;
+}
+
+.text{
+  cursor: text;
+}
+
+// display
+
+.dib{
+  display: inline-block;
+}
+
+.di{
+  display: inline;
+}
+
+.db{
+  display: block;
+}
+
+.dn{
+  display: none;
+}
+
+// font-weight
+
+.fb{
+  font-weight: bold;
+}
+
+// vertical-align
+
+.vc{
+  vertical-align:middle !important;
+}
+
+.vb{
+  vertical-align: bottom !important;
+}
+
+.vs{
+  vertical-align: sub !important;
+}
+
+// overflow
+
+.oa{
+  overflow: auto !important;
+}
+
+.oh{
+  overflow: hidden;
+}
+
+// text-overflow
+
+.te{
+  text-overflow:ellipsis;
+}
+
+// z-index
+
+.z999{
+  z-index: 999;
+}
+
+// position
+
+.pa{
+  position: absolute
+}
+
+.pr{
+  position: relative;
+}
+
+.pf{
+  position: fixed;
+}
+
+// border
+
+.borderGrey{
+  border: 1px solid $line;
+}
+
