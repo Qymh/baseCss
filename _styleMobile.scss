@@ -1,0 +1,75 @@
+// 统一加载背景弱化
+.alertBackGround{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  background-color: #fff;
+  opacity: 0.5;
+}
+
+// 加载图
+.alertLoading {
+  position: absolute;
+  left: 47%;
+  top: 0;
+  width: 0.8rem;
+  height: 0.8rem;
+  z-index: 200;
+  position: relative;
+  .cube1,.cube2{
+    background-color: #f65a44;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-animation: cubemove 1.8s infinite ease-in-out;
+    animation: cubemove 1.8s infinite ease-in-out;
+  }
+  .cube2{
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+  }
+}
+
+// 温馨提示
+.alertRemind{
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  width: 80%;
+  height: 1.7rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 0.4rem;
+  border-radius: 0.5rem;
+}
+
+@-webkit-keyframes cubemove {
+  25% { -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5) }
+  50% { -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg) }
+  75% { -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5) }
+  100% { -webkit-transform: rotate(-360deg) }
+}
+ 
+@keyframes cubemove {
+  25% {
+    transform: translateX(42px) rotate(-90deg) scale(0.5);
+    -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
+  } 50% {
+    transform: translateX(42px) translateY(42px) rotate(-179deg);
+    -webkit-transform: translateX(42px) translateY(42px) rotate(-179deg);
+  } 50.1% {
+    transform: translateX(42px) translateY(42px) rotate(-180deg);
+    -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
+  } 75% {
+    transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+    -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+  } 100% {
+    transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+  }
+}

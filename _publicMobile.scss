@@ -1,4 +1,7 @@
-@import './_color.scss';
+@import './_color';
+@import './_publicBoth';
+
+$baseFontSize: 75px !default;
 
 // 20次循环
 
@@ -52,6 +55,23 @@
   }
 }
 
+// 30次循环
+
+@for $i from 0 through 30{
+  // 字体
+  [data-dpr="1"] .font#{$i + 10}{
+    font-size: ($i + 10) * 1px !important;
+  }
+
+  [data-dpr="2"] .font#{$i + 10}{
+    font-size: ($i + 10) * 2px !important;
+  }
+
+  [data-dpr="3"] .font#{$i + 10}{
+    font-size: ($i + 10) * 3px !important;
+  }
+}
+
 // 50次循环
 
 @for $i from 1 through 50{
@@ -65,170 +85,3 @@
     line-height:$i * 0.1rem;
   }
 }
-
-// 颜色
-
-.colorSky{
-  color: $sky !important;
-}
-
-.colorPink{
-  color: deeppink !important;
-}
-
-.colorBlack{
-  color: #000 !important;
-}
-
-.colorWhite{
-  color: #fff !important;
-}
-
-.colorGreen{
-  color: $thinGreen !important;
-}
-
-.colorLine{
-  color:$line !important;
-}
-
-.colorGrey{
-  color:$lighterGrey !important;
-}
-
-.colorText{
-  color:#8e959a !important;
-}
-
-// 背景颜色
-
-.bkSky{
-  background-color: $sky;
-}
-
-.bkWhite{
-  background-color: #fff;
-}
-
-.bkGreen{
-  background-color: $thinGreen;
-}
-
-.bkGrey{
-  background-color: #dedede;
-}
-
-// 水平
-
-.tl{
-  text-align: left;
-}
-
-.tc{
-  text-align: center;
-}
-
-.tr{
-  text-align: right;
-}
-
-// 浮动
-
-.fl{
-  float: left;
-}
-
-.fr{
-  float: right;
-}
-
-// 指针
-
-.point{
-  cursor: pointer;
-}
-
-.text{
-  cursor: text;
-}
-
-// display
-
-.dib{
-  display: inline-block;
-}
-
-.di{
-  display: inline;
-}
-
-.db{
-  display: block;
-}
-
-.dn{
-  display: none;
-}
-
-// font-weight
-
-.fb{
-  font-weight: bold;
-}
-
-// vertical-align
-
-.vc{
-  vertical-align:middle !important;
-}
-
-.vb{
-  vertical-align: bottom !important;
-}
-
-.vs{
-  vertical-align: sub !important;
-}
-
-// overflow
-
-.oa{
-  overflow: auto !important;
-}
-
-.oh{
-  overflow: hidden;
-}
-
-// text-overflow
-
-.te{
-  text-overflow:ellipsis;
-}
-
-// z-index
-
-.z999{
-  z-index: 999;
-}
-
-// position
-
-.pa{
-  position: absolute
-}
-
-.pr{
-  position: relative;
-}
-
-.pf{
-  position: fixed;
-}
-
-// border
-
-.borderGrey{
-  border: 1px solid $line;
-}
-
