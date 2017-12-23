@@ -5,53 +5,50 @@ $baseFontSize: 75px !default;
 
 // 20次循环
 
-@for $i from 1 through 20{
+@for $i from 0 through 20{
   // margin
   .l#{$i}{
-    left:$i * 0.1rem
+    left:$i * 0.1rem !important
   }
   .r#{$i}{
-    right:$i * 0.1rem
+    right:$i * 0.1rem !important
   }
   .t#{$i}{
-    top:$i * 0.1rem
+    top:$i * 0.1rem !important
   }
   .b#{$i}{
-    bottom:$i * 0.1rem
+    bottom:$i * 0.1rem !important
   }
   .mt#{$i}{
-    margin-top:$i * 0.1rem;
+    margin-top:$i * 0.1rem !important;
   }
   .mr#{$i}{
-    margin-right:$i * 0.1rem;
+    margin-right:$i * 0.1rem !important;
   }
   .mb#{$i}{
-    margin-bottom:$i * 0.1rem;
+    margin-bottom:$i * 0.1rem !important;
   }
   .ml#{$i}{
-    margin-left:$i * 0.1rem;
+    margin-left:$i * 0.1rem !important;
   }
 
   // padding
   .pt#{$i}{
-    padding-top:$i * 0.1rem;
+    padding-top:$i * 0.1rem !important;
   }
   .pr#{$i}{
-    padding-right:$i * 0.1rem;
+    padding-right:$i * 0.1rem !important;
   }
   .pb#{$i}{
-    padding-bottom:$i * 0.1rem;
+    padding-bottom:$i * 0.1rem !important;
   }
   .pl#{$i}{
-    padding-left:$i * 0.1rem;
+    padding-left:$i * 0.1rem !important;
   }
 
-  // 高宽
-  .col#{$i * 5}{
-    width:$i * 5%;
-  }
-  .row#{$i * 5}{
-    height:$i * 5%;
+  // text-indent
+  .ti#{$i}{
+    text-indent: $i * 0.1rem !important;
   }
 }
 
@@ -74,14 +71,14 @@ $baseFontSize: 75px !default;
 
 // 50次循环
 
-@for $i from 1 through 50{
+@for $i from 0 through 50{
   .h#{$i}{
-    height:$i * 0.1rem;
+    height:$i * 0.1rem !important;
   }
   .w#{$i}{
-    width:$i * 0.1rem;
+    width:$i * 0.1rem !important;
   }
   .lh#{$i}{
-    line-height:$i * 0.1rem;
+    line-height:$i * 0.1rem !important;
   }
 }

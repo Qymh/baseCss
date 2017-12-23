@@ -7,6 +7,18 @@
 	box-sizing: border-box;
 }
 
+input{
+	padding-top: 0;
+	padding-bottom: 0;
+	border: 0;
+	outline: 0;
+}
+
+input:not([type]){
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,7 +36,9 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: inherit;
+	font:inherit;
 	vertical-align: baseline;
+	-webkit-tap-highlight-color:rgba(0,0,0,0)
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 

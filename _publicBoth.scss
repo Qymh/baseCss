@@ -1,13 +1,13 @@
 // 公共的循环变量
-@for $i from 1 through 20{
+@for $i from 0 through 20{
   // 宽度百分比
   .col#{$i * 5}{
-    width: $i * 5%;
+    width: $i * 5% !important;
   }
 
   // 高度百分比
   .row#{$i * 5}{
-    height: $i * 5%;
+    height: $i * 5% !important;
   }
 }
 
@@ -22,11 +22,19 @@
 }
 
 .colorBlack{
-  color: #000 !important;
+  color: #333 !important;
 }
 
 .colorOrange{
   color: #F65A44 !important;
+}
+
+.colorLightOrange{
+  color:#f89432 !important;
+}
+
+.colorRed{
+  color: red !important;
 }
 
 .colorWhite{
@@ -49,6 +57,10 @@
   color:#8e959a !important;
 }
 
+.colorLightRed{
+  color: #F7E5E3 !important;
+}
+
 // 背景颜色
 
 .bkSky{
@@ -67,8 +79,28 @@
   background-color: #dedede;
 }
 
+.bkLightGrey{
+  background-color: #eee;
+}
+
 .bkOrange{
-  background-color: #F65A44;
+  background-color: #F65A44 !important;
+}
+
+.bkLightOrange{
+  background-color: #f89432 !important;
+}
+
+.bkRed{
+  background-color: red;
+}
+
+.bkLightRed{
+  background-color: #F7E5E3;
+}
+
+.bkBlack{
+  background-color: #000;
 }
 
 // 水平
@@ -187,5 +219,49 @@
 
 .borderGrey{
   border: 1px solid $line;
+}
+
+.borderDarkGery{
+  border: 1px solid #d6d7dc;
+}
+
+.borderBottom{
+  border-bottom:solid 1px #d6d7dc;
+}
+
+.borderBottomDark{
+  border-bottom: 1px solid #666;
+}
+
+.borderNone{
+  border:0;
+}
+
+// border-radius
+
+.br50{
+  border-radius:50%;
+}
+
+// text-decoration
+
+.tdline{
+  text-decoration:line-through; 
+}
+
+.tdnone{
+  text-decoration: none;
+}
+
+// 清除浮动
+.clearFix{
+  zoom:1;
+  &:after{
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+  }
 }
 

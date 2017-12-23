@@ -1,7 +1,16 @@
-@import '_resetInner';
 @import '_mixin';
 @import '_flex';
 @import '_color';
+@import '_animated';
 @import '_styleMobile';
 @import '_publicMobile';
-@import '_animated';
+@import '_resetInner';
+
+a{
+  color:#000;
+  text-decoration:none;
+}
+
+html,body,.app{
+  height:100%;
+}
