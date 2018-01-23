@@ -2,34 +2,11 @@
 @import '_flex';
 @import '_color';
 @import '_animated';
-@import '_styleMobile';
-@import '_publicMobile';
+@import '_stylePc';
+@import '_publicPc';
 @import '_resetInner';
 
 a{
-  color:#000;
+  color:#333;
   text-decoration:none;
-}
-
-html{
-  box-sizing: border-box;
-  color: #333;
-  font-family: 'Helvetica Neue',Tahoma,Arial,PingFangSC-Regular,'Hiragino Sans GB','Microsoft Yahei',sans-serif;
-  line-height: 1.2;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-font-smoothing: antialiased;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
-  -webkit-text-size-adjust: none;
-  -moz-text-size-adjust: none;
-  -ms-text-size-adjust: none;
-  text-size-adjust: none;
-}
-
-html,body,.app{
-  height: 100%;
-  width: 100%;
 }
