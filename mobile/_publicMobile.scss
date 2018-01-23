@@ -3,9 +3,9 @@
 
 $baseFontSize: 75px !default;
 
-// 20次循环
+// 30次循环
 
-@for $i from 0 through 20{
+@for $i from 0 through 30{
   // margin
   .l#{$i}{
     left:$i * 0.1rem !important
@@ -50,11 +50,12 @@ $baseFontSize: 75px !default;
   .ti#{$i}{
     text-indent: $i * 0.1rem !important;
   }
-}
 
-// 30次循环
+  // border-radius
+  .br#{$i}{
+    border-radius: $i * 0.1rem !important;
+  }
 
-@for $i from 0 through 30{
   // 字体
   [data-dpr="1"] .font#{$i + 10}{
     font-size: ($i + 10) * 1px !important;

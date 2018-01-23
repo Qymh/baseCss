@@ -1,8 +1,8 @@
 @import './_color.scss';
 @import './_publicBoth.scss';
 
-// 10次循环
-@for $i from 1 through 10{
+// 50次循环
+@for $i from 1 through 50{
   // margin-top
   .mt#{$i * 5}{
     margin-top: $i * 5px;
@@ -43,11 +43,15 @@
     padding-right: $i * 5px;
   }
 
-  // line-height
-  .lh#{$i * 5}{
-    line-height: $i * 5px;
+  //border-radius
+  .br#{$i * 1}{
+    border-radius:$i *1px;
+    -moz-border-radius:$i *1px;
+    -webkit-border-radius:$i *1px;
+    -o-border-radius:$i *1px;
+    -ms-border-radius:$i *1px;
   }
-
+  
 }
 
 // 20次循环
@@ -57,23 +61,20 @@
     font-size: $i + 10px;
   }
 
-  //border-radius
-  .br#{$i * 1}{
-    border-radius:$i *1px;
-    -moz-border-radius:$i *1px;
-    -webkit-border-radius:$i *1px;
-    -o-border-radius:$i *1px;
-    -ms-border-radius:$i *1px;
-  }
 }
 
-// 100次循环
-
-@for $i from 1 through 100{
+// 150次循环
+@for $i from 1 through 150{
   // 高
   .h#{$i * 5}{
     height: $i * 5px;
   }
+
+  // line-height
+  .lh#{$i * 5}{
+    line-height: $i * 5px;
+  }
+
   // 宽
   .w#{$i * 5}{
     width: $i * 5px;

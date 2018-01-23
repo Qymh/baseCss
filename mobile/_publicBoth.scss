@@ -1,4 +1,12 @@
 // 公共的循环变量
+@for $i from 0 through 10{
+  // 透明度
+  .opacity#{$i}{
+    opacity: $i * 0.1;
+  }
+}
+
+// 公共的循环变量
 @for $i from 0 through 20{
   // 宽度百分比
   .col#{$i * 5}{
@@ -9,6 +17,22 @@
   .row#{$i * 5}{
     height: $i * 5% !important;
   }
+
+  // z-index
+  .z#{$i * 1}{
+    z-index: $i;
+  }
+}
+
+// height
+
+.ha{
+  height: auto !important;
+}
+
+// word-break
+.wbb{
+  word-break: break-all;
 }
 
 // 颜色
@@ -18,31 +42,31 @@
 }
 
 .colorPink{
-  color: deeppink !important;
+  color: $pink !important;
 }
 
 .colorBlack{
-  color: #333 !important;
+  color:$blank !important;
 }
 
 .colorOrange{
-  color: #F65A44 !important;
+  color:$orange !important;
 }
 
 .colorLightOrange{
-  color:#f89432 !important;
+  color:$lightOrange !important;
 }
 
 .colorRed{
-  color: red !important;
+  color: $red !important;
 }
 
 .colorWhite{
-  color: #fff !important;
+  color: $white !important;
 }
 
 .colorGreen{
-  color: $thinGreen !important;
+  color: $green !important;
 }
 
 .colorLine{
@@ -61,6 +85,10 @@
   color: #F7E5E3 !important;
 }
 
+.colorPurple{
+  color:$purple !important;
+}
+
 // 背景颜色
 
 .bkSky{
@@ -68,11 +96,11 @@
 }
 
 .bkWhite{
-  background-color: #fff;
+  background-color: $white;
 }
 
 .bkGreen{
-  background-color: $thinGreen;
+  background-color: $green;
 }
 
 .bkGrey{
@@ -84,15 +112,15 @@
 }
 
 .bkOrange{
-  background-color: #F65A44 !important;
+  background-color: $orange !important;
 }
 
 .bkLightOrange{
-  background-color: #f89432 !important;
+  background-color:$lightOrange !important;
 }
 
 .bkRed{
-  background-color: red;
+  background-color:$red;
 }
 
 .bkLightRed{
@@ -100,7 +128,11 @@
 }
 
 .bkBlack{
-  background-color: #000;
+  background-color: $blank !important;
+}
+
+.bkPurple{
+  background-color: $purple !important;
 }
 
 // 水平
@@ -179,6 +211,7 @@
 
 .oa{
   overflow: auto !important;
+  -webkit-overflow-scrolling: touch !important;
 }
 
 .oh{
@@ -189,16 +222,14 @@
   overflow: visible;
 }
 
+.os{
+  overflow: scroll;
+}
+
 // text-overflow
 
 .te{
   text-overflow:ellipsis;
-}
-
-// z-index
-
-.z999{
-  z-index: 999;
 }
 
 // position
@@ -215,14 +246,26 @@
   position: fixed;
 }
 
+.ps{
+  position: sticky;
+}
+
 // border
 
 .borderGrey{
   border: 1px solid $line;
 }
 
+.borderOrange{
+  border: 1px solid $orange;
+}
+
 .borderDarkGery{
   border: 1px solid #d6d7dc;
+}
+
+.borderMoreDarkGrey{
+  border: 1px solid #666;
 }
 
 .borderBottom{
@@ -231,6 +274,18 @@
 
 .borderBottomDark{
   border-bottom: 1px solid #666;
+}
+
+.borderBottomOrange{
+  border-bottom: 1px solid $orange;
+}
+
+.borderTop{
+  border-top:solid 1px #d6d7dc;
+}
+
+.borderTopDark{
+  border-top: 1px solid #666;
 }
 
 .borderNone{

@@ -10,20 +10,20 @@
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: 1000;
+  z-index: 6;
   background-color: #fff;
   opacity: 0.05;
 }
 
+// 背景黑色弱化
 .alertBkFilter{
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: 1000;
-  background-color: #000;
-  opacity: 0.5;
+  z-index: 6;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 // 加载图
@@ -33,11 +33,11 @@
   top: 40%;
   width: 0.8rem;
   height: 0.8rem;
-  z-index: 2000;
+  z-index: 8;
   .cube1,.cube2{
     background-color: #f65a44;
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
     position: absolute;
     top: 0;
     left: 0;
@@ -54,37 +54,65 @@
 .alertRemind{
   position: absolute;
   left: 20%;
-  top: 50%;
+  top: 45%;
   width: 60%;
-  z-index: 3000;
-  padding: 0.2rem 0.2rem;
+  z-index: 8;
+  padding: 0.4rem 0.2rem;
   word-break: break-all;
   line-height: 0.5rem;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.3);
   color: #fff;
   border-radius: 0.5rem;
 }
 
+// 确认
+.alertConfirm{
+  position: absolute;
+  left: 15%;
+  top: 40%;
+  width: 70%;
+  border-radius: 0.2rem;
+  background-color: #e8e8e8;
+  z-index:8;
+  span{
+    color: #0894ec;
+  }
+  .word{
+    border-bottom: 1px solid #666;
+  }
+  .cancel{
+    position: relative;
+    &:before{
+      content:'';
+      position: absolute;
+      left: 0;
+      height: 50%;
+      width: 1px;
+      background-color: #666;
+    }
+  }
+}
+
 @-webkit-keyframes cubemove {
-  25% { -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5) }
-  50% { -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg) }
-  75% { -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5) }
+  25% { -webkit-transform: translateX(44px) rotate(-90deg) scale(0.5) }
+  50% { -webkit-transform: translateX(44px) translateY(44px) rotate(-180deg) }
+  75% { -webkit-transform: translateX(0px) translateY(44px) rotate(-270deg) scale(0.5) }
   100% { -webkit-transform: rotate(-360deg) }
 }
 
 @keyframes cubemove {
   25% {
-    transform: translateX(42px) rotate(-90deg) scale(0.5);
-    -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
+    transform: translateX(44px) rotate(-90deg) scale(0.5);
+    -webkit-transform: translateX(44px) rotate(-90deg) scale(0.5);
   } 50% {
-    transform: translateX(42px) translateY(42px) rotate(-179deg);
-    -webkit-transform: translateX(42px) translateY(42px) rotate(-179deg);
+    transform: translateX(44px) translateY(44px) rotate(-179deg);
+    -webkit-transform: translateX(44px) translateY(44px) rotate(-179deg);
   } 50.1% {
-    transform: translateX(42px) translateY(42px) rotate(-180deg);
-    -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
+    transform: translateX(44px) translateY(44px) rotate(-180deg);
+    -webkit-transform: translateX(44px) translateY(44px) rotate(-180deg);
   } 75% {
-    transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
-    -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+    transform: translateX(0px) translateY(44px) rotate(-270deg) scale(0.5);
+    -webkit-transform: translateX(0px) translateY(44px) rotate(-270deg) scale(0.5);
   } 100% {
     transform: rotate(-360deg);
     -webkit-transform: rotate(-360deg);
@@ -142,6 +170,10 @@
   min-width: 0.5rem;
   margin-right: 0.2rem;
   border-radius: 0.1rem;
+  &.active{
+    background-color: $orange;
+    color: $white;
+  }
 }
 
 // 省略样式
@@ -159,7 +191,7 @@
     }
   }
 
-  .omit{
+  .omit#{$i}{
     width: 100%;
     line-height: 0.5rem;
     overflow: hidden;
@@ -170,5 +202,41 @@
   }
 }
 
+/*** vue-lazyload ***/
+[lazy=loaded]{
+  animation: imgBlink linear 0.2s;
+}
+
+@keyframes imgBlink{
+  50%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
 
 /*** 局部重复样式类 ***/
+
+// 滑动分页器
+.swiper-pagination-bullet{
+  height: 0.2rem !important;
+  width: 0.2rem !important;
+}
+
+.swiper-pagination-bullets{
+  bottom: 0.2rem !important; 
+}
+
+/*** 移动端特殊 ***/
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: none;
+  -webkit-touch-callout: none;
+  -webkit-font-smoothing: antialiased;
+}
+
