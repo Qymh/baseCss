@@ -1,12 +1,4 @@
-@import '_mixin';
-@import '_flex';
+@import '_flexClone';
 @import '_color';
-@import '_animated';
-@import '_stylePc';
+@import '_publicBoth';
 @import '_publicPc';
-@import '_resetInner';
-
-a{
-  color:#333;
-  text-decoration:none;
-}
